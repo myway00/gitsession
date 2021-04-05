@@ -1,0 +1,16 @@
+<h1>일기 내용 자세히 보기</h1>
+<!--파이썬에서 0 or 비어있으면 거짓이고 아니면 참이다-->
+<div>
+	{% if post.pub_date %}
+	<div>
+		{{ post.pub_date }}
+	</div>
+	{% endif %}
+	<h1> {{ post.title }}</h1>
+	<p> {{ post.body|linebreaks }}</p>
+    <!--필터 라인브레이크 : 한줄 띄어주는 것-->
+</div>
+
+<a href="{% url 'edit' index=post.pk %}">수정하기</a><br>
+<a href="{% url 'delete' pk=post.pk %}">삭제하기</a>
+

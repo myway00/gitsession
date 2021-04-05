@@ -1,0 +1,6 @@
+<h1>일기 수정하기</h1>
+	<form method="POST" class="post-form">{% csrf_token %}
+		{{ form.as_p }}
+		<button type="submit" class="save btn btn-default">Save</button>
+	</form>
+    <!--디폴트값이 겟이라서, 포스트 꼭 놓고 쿠기값을 난수로 주는 역할을 하는 넣어주기-->
